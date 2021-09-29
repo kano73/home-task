@@ -1,27 +1,42 @@
 ﻿#include <iostream>
 using namespace std;
+
 int main()
 {
+    double dLB, dWB, dHB;   
+    double dW, dH;         
     setlocale(LC_ALL, "RUS");
-    int bL, bW, bH, hL, hH;
-    cout << "введите длину параллелепипеда";
-    cin >> bL;
-    cout << "введите ширину параллелепипеда";
-    cin >> bW;
-    cout << "введите высоту параллелепипеда";
-    cin >> bH;
-    cout << "введите длину отверстия";
-    cin >> hL;
-    cout << "введите высоту отверстия";
-    cin >> hH;
-    if ((bL <= hL || bW <= hL) & bH <= hH)
+    
+
+    cout << "Введите длинну параллелепипед ";
+    cin >> dLB;
+    cout << "Введите ширину параллелепипед ";
+    cin >> dWB;
+    cout << "Введите высоту параллелепипед ";
+    cin >> dHB;
+
+    cout << "Введите ширина отверстия: ";
+    cin >> dW;
+    cout << "Введите высоту отверстия: ";
+    cin >> dH;
+
+    if (dWB <= dW && dHB <= dH)
     {
-        cout << "параллелепипед проходит в отверсие" << endl;
+        cout << "параллелепипед войдёт в отверстие 1-й стороной" << endl;
+    }
+    else if (dLB <= dW && dHB <= dH)
+    {
+        cout << "параллелепипед войдёт в отверстие 2-й стороной" << endl;
+    }
+    else if (dLB <= dW && dWB <= dH)
+    {
+        cout << "параллелепипед войдёт в отверстие 3-й стороной" << endl;
     }
     else
     {
-        cout << "Параллелепипед не проходит в отверсие" << endl;
+        cout << "параллелепипед не пройдёт" << endl;
     }
-    system("pause");
+
     return 0;
+
 }
